@@ -1,3 +1,5 @@
+### Date-31/10/2023
+
 # Ex02 Django ORM Web Application
 ## Date: 
 
@@ -24,11 +26,14 @@ Execute Django admin and create 10 Football players
 
 ## PROGRAM
 
+### admin.py
+```
 from django.contrib import admin
 from .models import Football,FootballAdmin
 admin.site.register(Football,FootballAdmin)
-
-
+```
+### model.py
+```
 from django.db import models
 from django.contrib import admin
 class Football (models.Model):
@@ -40,6 +45,7 @@ class Football (models.Model):
 
 class FootballAdmin(admin.ModelAdmin):
     list_display=('jerseyno','name','country','age','YOE')
+```
 
 ## OUTPUT
 
